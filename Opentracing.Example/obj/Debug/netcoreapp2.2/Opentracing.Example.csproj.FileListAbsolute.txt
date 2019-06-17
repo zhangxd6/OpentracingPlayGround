@@ -1,0 +1,14 @@
+/Users/zhangxd6/Documents/Xcode/csharp/opentracing/Opentracing.Example/bin/Debug/netcoreapp2.2/Opentracing.Example.deps.json
+/Users/zhangxd6/Documents/Xcode/csharp/opentracing/Opentracing.Example/bin/Debug/netcoreapp2.2/Opentracing.Example.runtimeconfig.json
+/Users/zhangxd6/Documents/Xcode/csharp/opentracing/Opentracing.Example/bin/Debug/netcoreapp2.2/Opentracing.Example.runtimeconfig.dev.json
+/Users/zhangxd6/Documents/Xcode/csharp/opentracing/Opentracing.Example/bin/Debug/netcoreapp2.2/Opentracing.Example.dll
+/Users/zhangxd6/Documents/Xcode/csharp/opentracing/Opentracing.Example/bin/Debug/netcoreapp2.2/Opentracing.Example.pdb
+/Users/zhangxd6/Documents/Xcode/csharp/opentracing/Opentracing.Example/obj/Debug/netcoreapp2.2/Opentracing.Example.csprojAssemblyReference.cache
+/Users/zhangxd6/Documents/Xcode/csharp/opentracing/Opentracing.Example/obj/Debug/netcoreapp2.2/Opentracing.Example.csproj.CoreCompileInputs.cache
+/Users/zhangxd6/Documents/Xcode/csharp/opentracing/Opentracing.Example/obj/Debug/netcoreapp2.2/Opentracing.Example.RazorAssemblyInfo.cache
+/Users/zhangxd6/Documents/Xcode/csharp/opentracing/Opentracing.Example/obj/Debug/netcoreapp2.2/Opentracing.Example.RazorAssemblyInfo.cs
+/Users/zhangxd6/Documents/Xcode/csharp/opentracing/Opentracing.Example/obj/Debug/netcoreapp2.2/Opentracing.Example.AssemblyInfoInputs.cache
+/Users/zhangxd6/Documents/Xcode/csharp/opentracing/Opentracing.Example/obj/Debug/netcoreapp2.2/Opentracing.Example.AssemblyInfo.cs
+/Users/zhangxd6/Documents/Xcode/csharp/opentracing/Opentracing.Example/obj/Debug/netcoreapp2.2/Opentracing.Example.RazorTargetAssemblyInfo.cache
+/Users/zhangxd6/Documents/Xcode/csharp/opentracing/Opentracing.Example/obj/Debug/netcoreapp2.2/Opentracing.Example.dll
+/Users/zhangxd6/Documents/Xcode/csharp/opentracing/Opentracing.Example/obj/Debug/netcoreapp2.2/Opentracing.Example.pdb
