@@ -1,0 +1,17 @@
+version: '3.4'
+
+services:
+  opentracing.example:
+    image: ${DOCKER_REGISTRY-}opentracing.server
+    build:
+      context: .
+      dockerfile: Opentracing.Example/Dockerfile
+
+  opentracing.service:
+    image: ${DOCKER_REGISTRY-}opentracing.client
+    build:
+      context: .
+      dockerfile: Opentracing.Service/Dockerfile
+    depends_on:
+      - opentracing.example
+

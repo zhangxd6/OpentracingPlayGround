@@ -1,16 +1,26 @@
-﻿<Properties StartupConfiguration="{06B62F9C-7680-46D1-8AF9-109C20B5C91B}|Default">
+﻿<Properties StartupConfiguration="{F2B4F392-F505-4AF5-A41B-9EDD88AF12E6}|Default">
   <MonoDevelop.Ide.ItemProperties.Opentracing.Example PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.ItemProperties.Opentracing.Service PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Opentracing.Example/Controllers/ValueController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="docker-compose.yml">
     <Files>
       <File FileName="Opentracing.Service/Program.cs" Line="1" Column="1" />
       <File FileName="Opentracing.Example/Program.cs" Line="17" Column="1" />
       <File FileName="Opentracing.Example/Controllers/ValueController.cs" Line="1" Column="1" />
+      <File FileName="Opentracing.Example/Dockerfile" Line="1" Column="1" />
+      <File FileName="Opentracing.Service/Dockerfile" Line="1" Column="1" />
+      <File FileName="docker-compose.yml" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="opentracing" expanded="True" selected="True" />
+          <Node name="opentracing" expanded="True">
+            <Node name="docker-compose" expanded="True">
+              <Node name="docker-compose.yml" selected="True" />
+            </Node>
+            <Node name="Opentracing.Example" expanded="True">
+              <Node name="Controllers" expanded="True" />
+            </Node>
+          </Node>
         </State>
       </Pad>
       <Pad Id="MonoDevelop.Debugger.WatchPad">
@@ -20,6 +30,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.docker-compose PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

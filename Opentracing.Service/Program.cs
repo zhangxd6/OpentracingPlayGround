@@ -42,7 +42,7 @@ namespace Opentracing.Service
           {
             hclient.DefaultRequestHeaders.Add(entry.Key,entry.Value);
           }
-          var result = await hclient.GetAsync("http://localhost:5000/api/value");
+          var result = await hclient.GetAsync("http://server:5000/api/value");
           System.Threading.Thread.Sleep(1000);
           
         }
