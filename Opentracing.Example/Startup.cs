@@ -25,6 +25,8 @@ namespace Opentracing.Example
             });
             services.AddOpenTracing();   
 
+            services.AddDbContext<Opentracing.DataAccess.TracingDbContext>();
+
             services.AddSingleton<ITracer>(serviceProvider => {
                 string serviceName = serviceProvider.GetRequiredService<IHostingEnvironment>().ApplicationName;
                 var loggerFactory = serviceProvider.GetRequiredService<ILoggerFactory>();

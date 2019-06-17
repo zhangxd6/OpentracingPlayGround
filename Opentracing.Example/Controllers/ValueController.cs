@@ -9,6 +9,7 @@ using OpenTracing.Propagation;
 using OpenTracing.Tag;
 using Opentracing.Lib;
 using System.Threading.Tasks;
+using Opentracing.DataAccess;
 
 [Route("api/value")]
 
@@ -16,11 +17,13 @@ public class ValueController : Controller
 {
   private readonly ITracer _tracer;
   private readonly ILogger _logger;
+  private readonly TracingDbContext _db;
 
-  public ValueController(ITracer tracer,ILoggerFactory loggerfactory)
+  public ValueController(ITracer tracer,ILoggerFactory loggerfactory, Opentracing.DataAccess.TracingDbContext db)
   {
     _tracer = tracer;
     _logger = loggerfactory.CreateLogger<ValueController>();
+    _db =db;
   }
 
   [HttpGet]
@@ -33,7 +36,7 @@ public class ValueController : Controller
       _logger.LogDebug($"Child:{scope.Span.Context.SpanId}:{scope.Span.Context.TraceId}");
       var result = "mew ";
       scope.Span.SetTag("hello-to", result);
-      var worker = new Worker();
+      var worker = new Worker(_db);
       await worker.SomeWork();
       return result;
 

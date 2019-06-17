@@ -8,4 +8,8 @@
     <PackageReference Include="jaeger" Version="0.3.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Opentracing.DataAccess\Opentracing.DataAccess.csproj" />
+  </ItemGroup>
+
 </Project>

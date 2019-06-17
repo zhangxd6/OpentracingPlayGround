@@ -9,11 +9,14 @@
     <PackageReference Include="jaeger" Version="0.3.2" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="2.2.4" />
     <PackageReference Include="OpenTracing.Contrib.NetCore" Version="0.6.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Opentracing.Lib\Opentracing.Lib.csproj" />
+    <ProjectReference Include="..\Opentracing.DataAccess\Opentracing.DataAccess.csproj" />
   </ItemGroup>
 
 </Project>
