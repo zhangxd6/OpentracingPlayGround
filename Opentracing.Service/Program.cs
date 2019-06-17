@@ -47,6 +47,7 @@ namespace Opentracing.Service
           
         }
       }
+      Console.ReadLine();
     }
   }
 }

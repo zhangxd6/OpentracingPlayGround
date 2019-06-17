@@ -12,3 +12,6 @@
 /Users/zhangxd6/Documents/Xcode/csharp/opentracing/Opentracing.Example/obj/Debug/netcoreapp2.2/Opentracing.Example.RazorTargetAssemblyInfo.cache
 /Users/zhangxd6/Documents/Xcode/csharp/opentracing/Opentracing.Example/obj/Debug/netcoreapp2.2/Opentracing.Example.dll
 /Users/zhangxd6/Documents/Xcode/csharp/opentracing/Opentracing.Example/obj/Debug/netcoreapp2.2/Opentracing.Example.pdb
+/Users/zhangxd6/Documents/Xcode/csharp/opentracing/Opentracing.Example/bin/Debug/netcoreapp2.2/Opentracing.Lib.dll
+/Users/zhangxd6/Documents/Xcode/csharp/opentracing/Opentracing.Example/bin/Debug/netcoreapp2.2/Opentracing.Lib.pdb
+/Users/zhangxd6/Documents/Xcode/csharp/opentracing/Opentracing.Example/obj/Debug/netcoreapp2.2/Opentracing.Example.csproj.CopyComplete

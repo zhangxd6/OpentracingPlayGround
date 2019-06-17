@@ -7,6 +7,8 @@ using Microsoft.Extensions.Logging;
 using OpenTracing;
 using OpenTracing.Propagation;
 using OpenTracing.Tag;
+using Opentracing.Lib;
+using System.Threading.Tasks;
 
 [Route("api/value")]
 
@@ -22,7 +24,7 @@ public class ValueController : Controller
   }
 
   [HttpGet]
-  public string Get()
+  public async Task<string> Get()
   {   
      var headers = Request.Headers.ToDictionary(k => k.Key, v => v.Value.First());
 
@@ -31,35 +33,36 @@ public class ValueController : Controller
       _logger.LogDebug($"Child:{scope.Span.Context.SpanId}:{scope.Span.Context.TraceId}");
       var result = "mew ";
       scope.Span.SetTag("hello-to", result);
-
+      var worker = new Worker();
+      await worker.SomeWork();
       return result;
 
     }
   }
 
-  public static IScope StartServerSpan(ITracer tracer, IDictionary<string, string> headers, string operationName, ILogger logger)
-  {
-    ISpanBuilder spanBuilder;
-    try
-    {
-      ISpanContext parentSpanCtx = tracer.Extract(BuiltinFormats.HttpHeaders, new TextMapExtractAdapter(headers));
+  // public static IScope StartServerSpan(ITracer tracer, IDictionary<string, string> headers, string operationName, ILogger logger)
+  // {
+  //   ISpanBuilder spanBuilder;
+  //   try
+  //   {
+  //     ISpanContext parentSpanCtx = tracer.Extract(BuiltinFormats.HttpHeaders, new TextMapExtractAdapter(headers));
 
-      logger.LogDebug($"{string.Join(",",headers.Select(kv=> $"{kv.Key}:{kv.Value}").ToArray())}");
+  //     logger.LogDebug($"{string.Join(",",headers.Select(kv=> $"{kv.Key}:{kv.Value}").ToArray())}");
 
-      spanBuilder = tracer.BuildSpan(operationName);
-      if (parentSpanCtx != null)
-      {
-        logger.LogDebug($"parnet:{parentSpanCtx.SpanId}:{parentSpanCtx.TraceId}");
-        spanBuilder = spanBuilder.AsChildOf(parentSpanCtx);
+  //     spanBuilder = tracer.BuildSpan(operationName);
+  //     if (parentSpanCtx != null)
+  //     {
+  //       logger.LogDebug($"parnet:{parentSpanCtx.SpanId}:{parentSpanCtx.TraceId}");
+  //       spanBuilder = spanBuilder.AsChildOf(parentSpanCtx);
         
-      }
-    }
-    catch (Exception)
-    {
-      spanBuilder = tracer.BuildSpan(operationName);
-    }
+  //     }
+  //   }
+  //   catch (Exception)
+  //   {
+  //     spanBuilder = tracer.BuildSpan(operationName);
+  //   }
 
-    // TODO could add more tags like http.url
-    // return spanBuilder.WithTag(Tags.SpanKind, Tags.SpanKindServer).StartActive(true);
-  }
+  //   // TODO could add more tags like http.url
+  //    return spanBuilder.WithTag(Tags.SpanKind, Tags.SpanKindServer).StartActive(true);
+  // }
 }

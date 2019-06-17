@@ -1,22 +1,16 @@
 ﻿<Properties StartupConfiguration="{06B62F9C-7680-46D1-8AF9-109C20B5C91B}|Default">
   <MonoDevelop.Ide.ItemProperties.Opentracing.Example PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.ItemProperties.Opentracing.Service PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Opentracing.Service/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Opentracing.Example/Controllers/ValueController.cs">
     <Files>
-      <File FileName="Opentracing.Service/Program.cs" Line="47" Column="10" />
+      <File FileName="Opentracing.Service/Program.cs" Line="1" Column="1" />
       <File FileName="Opentracing.Example/Program.cs" Line="17" Column="1" />
-      <File FileName="Opentracing.Example/Controllers/ValueController.cs" Line="41" Column="1" />
+      <File FileName="Opentracing.Example/Controllers/ValueController.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="opentracing" expanded="True">
-            <Node name="Opentracing.Example" expanded="True" selected="True">
-              <Node name="Dependencies" expanded="True" />
-              <Node name="Controllers" expanded="True" />
-            </Node>
-            <Node name="Opentracing.Service" expanded="True" />
-          </Node>
+          <Node name="opentracing" expanded="True" selected="True" />
         </State>
       </Pad>
       <Pad Id="MonoDevelop.Debugger.WatchPad">
@@ -27,10 +21,7 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/zhangxd6/Documents/Xcode/csharp/opentracing/Opentracing.Example/Controllers/ValueController.cs" relfile="Opentracing.Example/Controllers/ValueController.cs" line="39" column="1" />
-      <Breakpoint file="/Users/zhangxd6/Documents/Xcode/csharp/opentracing/Opentracing.Service/Program.cs" relfile="Opentracing.Service/Program.cs" line="44" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

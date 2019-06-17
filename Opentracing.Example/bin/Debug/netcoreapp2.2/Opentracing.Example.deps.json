@@ -28,6 +28,7 @@
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
           "Microsoft.NETCore.App": "2.2.0",
           "OpenTracing.Contrib.NetCore": "0.6.0",
+          "Opentracing.Lib": "1.0.0",
           "Jaeger": "0.3.2"
         },
         "runtime": {
@@ -119,6 +120,17 @@
         },
         "compile": {
           "lib/netcoreapp2.0/OpenTracing.Contrib.NetCore.dll": {}
+        }
+      },
+      "Opentracing.Lib/1.0.0": {
+        "dependencies": {
+          "Jaeger": "0.3.2"
+        },
+        "runtime": {
+          "Opentracing.Lib.dll": {}
+        },
+        "compile": {
+          "Opentracing.Lib.dll": {}
         }
       },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -3358,6 +3370,11 @@
       "sha512": "sha512-Nz+X3l+QJ5UzBMB1FeU81cQ9lOlqHL5V+HuSawSjOk0RPrUF4b30ik0ukjsT9ZPO4V+jkN0vX+lbxQte97RwCA==",
       "path": "opentracing.contrib.netcore/0.6.0",
       "hashPath": "opentracing.contrib.netcore.0.6.0.nupkg.sha512"
+    },
+    "Opentracing.Lib/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Microsoft.AspNet.WebApi.Client/5.2.6": {
       "type": "package",

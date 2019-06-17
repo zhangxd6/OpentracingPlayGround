@@ -4501,6 +4501,19 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
+      },
+      "Opentracing.Lib/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "jaeger": "0.3.2"
+        },
+        "compile": {
+          "bin/placeholder/Opentracing.Lib.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Opentracing.Lib.dll": {}
+        }
       }
     }
   },
@@ -12211,6 +12224,11 @@
         "system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xdocument.nuspec"
       ]
+    },
+    "Opentracing.Lib/1.0.0": {
+      "type": "project",
+      "path": "../Opentracing.Lib/Opentracing.Lib.csproj",
+      "msbuildProject": "../Opentracing.Lib/Opentracing.Lib.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -12219,6 +12237,7 @@
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
       "Microsoft.NETCore.App >= 2.2.0",
       "OpenTracing.Contrib.NetCore >= 0.6.0",
+      "Opentracing.Lib >= 1.0.0",
       "jaeger >= 0.3.2"
     ]
   },
@@ -12249,7 +12268,11 @@
       },
       "frameworks": {
         "netcoreapp2.2": {
-          "projectReferences": {}
+          "projectReferences": {
+            "/Users/zhangxd6/Documents/Xcode/csharp/opentracing/Opentracing.Lib/Opentracing.Lib.csproj": {
+              "projectPath": "/Users/zhangxd6/Documents/Xcode/csharp/opentracing/Opentracing.Lib/Opentracing.Lib.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
