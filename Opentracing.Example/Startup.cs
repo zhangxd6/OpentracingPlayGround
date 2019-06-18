@@ -12,6 +12,8 @@ using Jaeger;
 using Jaeger.Samplers;
 using Jaeger.Reporters;
 using OpenTracing.Util;
+using Jaeger.Senders;
+
 namespace Opentracing.Example
 {
     public class Startup
@@ -23,6 +25,9 @@ namespace Opentracing.Example
             services.AddLogging(build=>{
                 build.AddConsole();
             });
+
+            services.AddApplicationInsightsTelemetry();
+
             services.AddOpenTracing();   
 
             services.AddDbContext<Opentracing.DataAccess.TracingDbContext>();
@@ -32,10 +37,12 @@ namespace Opentracing.Example
                 var loggerFactory = serviceProvider.GetRequiredService<ILoggerFactory>();
                 loggerFactory.AddConsole();
                  var remoteReporter = new RemoteReporter.Builder()
-                .WithLoggerFactory(loggerFactory)
-                .Build();
+                                        //.WithSender(new UdpSender("jaeger",6831,0))
+                                        .WithLoggerFactory(loggerFactory)
+                                        .Build();
                    var loggingReporter = new LoggingReporter(loggerFactory);
                 var tracer = new Tracer.Builder(serviceName)
+                              
                               .WithSampler(new ConstSampler(true))
                               .WithReporter(new CompositeReporter(remoteReporter,loggingReporter))
                               .Build();

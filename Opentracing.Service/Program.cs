@@ -20,6 +20,7 @@ namespace Opentracing.Service
 
             var loggingReporter = new LoggingReporter(loggerFactory);
             var remoteReporter = new RemoteReporter.Builder()
+                //.WithSender(new UdpSender("jaeger",6831,0))
                 .WithLoggerFactory(loggerFactory)
                 .Build();
             var tracer = new Tracer.Builder("Server")
@@ -42,7 +43,7 @@ namespace Opentracing.Service
           {
             hclient.DefaultRequestHeaders.Add(entry.Key,entry.Value);
           }
-          var result = await hclient.GetAsync("http://server:5000/api/value");
+          var result = await hclient.GetAsync("http://localhost:5000/api/value");
           System.Threading.Thread.Sleep(1000);
           
         }
